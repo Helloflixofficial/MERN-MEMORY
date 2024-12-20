@@ -2,15 +2,21 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import mongoose from "mongoose";
+import postRrouter from "./Routes/posts.js";
+
+
 const app = express();
+app.use('/posts',postRrouter);
+
+
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
-const URL = 'mongodb://root:root@localhost:27017/';
-const PORT = process.env.PORT || 3000;
-mongoose.connect(URL, { useNewUrlParser: true, useUnifiedTopology: true })
+const URL = 'mongodb+srv://helloflixofficial:helloflixofficial@cluster0.fzcv7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const PORT = process.env.PORT || 5000;
+mongoose.connect(URL)
   .then(() => {
     app.listen(PORT, () => console.log(`Server running on PORT: ${PORT}`));
   })
   .catch((error) => console.log(error.message));
-mongoose.set('useFindAndModify', false);
+
