@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import { useEffect } from "react";
 import Form from "./components/Forms/Form.js";
 import Posts from "./components/Posts/Posts.js";
 import memoriesImage from './Images/memories.png';
