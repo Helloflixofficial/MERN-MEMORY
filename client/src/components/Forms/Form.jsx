@@ -1,9 +1,8 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import { TextField, Button, Typography, Paper } from "@mui/material";
 import FileBase from 'react-file-base64';
-import useStyles from './style.jsx';
+import useStyles from './style.js';
 import { useDispatch } from 'react-redux';
-// import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { createPost } from "../../actions/posts.js"
 
 const Form = () => {
