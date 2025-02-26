@@ -9,8 +9,6 @@ app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
-
-
 app.use('/posts', postRrouter);
 const URL = 'mongodb+srv://helloflixofficial:helloflixofficial@cluster0.fzcv7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 const PORT = process.env.PORT || 5000;
