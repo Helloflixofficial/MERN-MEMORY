@@ -5,6 +5,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
 import App from './App.jsx';
 import { reducers } from './reducers/index.js';
+import './index.css';
 
 const store = configureStore({
   reducer: reducers,
